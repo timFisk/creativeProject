@@ -27,20 +27,4 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
       results += "</p>";
       document.getElementById("weatherResults").innerHTML = results;
     });
-
-  const url2 = "http://api.openweathermap.org/data/2.5/forecast?q=" + value + ", US&units=imperial" + "&APPID=89f621ab942e3a96e2766b9cdc3459e5";
-  fetch(url2)
-    .then(function(response) {
-      return response.json();
-    }).then(function(json) {
-      console.log(json);
-      let forecast = "";
-      forecast += "<h2>Here's the weather for the next few days.</h2>";
-      for (let i = 0; i < json.list.length; i++) {
-        forecast += "<h3>Weather in " + json.city.name + " on " + moment(json.list[i].dt_txt).format('MMMM Do YYYY, h:mm:ss a') + "</h3>";
-        forecast += "<p>Temperature: " + json.list[i].main.temp + "</p>";
-        forecast += '<img src="http://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png"/>'
-      }
-      document.getElementById("forecastResults").innerHTML = forecast;
-    });
 });
