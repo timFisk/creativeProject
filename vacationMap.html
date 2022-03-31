@@ -17,8 +17,8 @@
 <body>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">How to become Timmy Not the Kid</h1>
-      <p class="lead">More so than becoming like me this is to highlight some things about me, but go crazy and try if you want.</p>
+      <h1 class="display-4">How to love the stars like Timmy Not the Kid.</h1>
+      <p class="lead">I've been in love with the stars for as long as I can remember. Take a look a NASA's picture of the day.</p>
     </div>
   </div>
 
@@ -51,9 +51,6 @@
         <li class="nav-item">
           <a class="nav-link" href="NASA.html">Space</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="vacationMap.html">Vacation Map</a>
-        </li>
       </ul>
     </div>
   </nav>
@@ -62,19 +59,17 @@
   <div class="row">
     <div class="leftcolumn">
       <div class="card">
-        <h2>Don't Be Me</h2>
-        <h5>I know what the site says but listen to this.</h5>
-        <img src="loneIsland.jpeg" style="width:100%" alt="Lone Island">
-        <p>You should be yourself. </p>
-        <p>This probably deserves a bit more attention than I am giving it but just be you. Learn an apply in your own way. Be like this island. Do your thing.</p>
+        <h2>NASA's Picture of the Day</h2>
+        <h5>Click to look at it.</h5>
+        <form>
+          <input id="starsPicSubmit" type="submit" value="View"></input>
+        </form>
+        <hr>
+        <div id="starsPic">
+        </div>
       </div>
     </div>
     <div class="rightcolumn">
-      <div class="card">
-        <h2>About Me</h2>
-        <img src="IMG_1771.jpeg" style="width:100%" alt="Profile Pic">
-        <p>This whole website is about me. So I guess just look around.</p>
-      </div>
       <div class="card">
         <h3>Follow Me</h3>
         <a href="https://www.instagram.com/t__fisk/">Instagram</a>
@@ -94,7 +89,11 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script defer src="https://connect.podium.com/widget.js#API_TOKEN=20d34b0e-dc62-4a40-a1c6-786e89418e5d" id="podium-widget" data-api-token="20d34b0e-dc62-4a40-a1c6-786e89418e5d"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <script text="type/javascript" src="NASAscript.js">
+  </script>
+
 </body>
 
 </html>
