@@ -11,14 +11,18 @@
 
   <<link rel="stylesheet" href="master.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
     <title>Ultimate How To</title>
 </head>
 
 <body>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">How to love the stars like Timmy Not the Kid.</h1>
-      <p class="lead">I've been in love with the stars for as long as I can remember. Take a look a NASA's picture of the day.</p>
+      <h1 class="display-4">Visualization of My Trips</h1>
+      <p class="lead">This is an experiment.</p>
     </div>
   </div>
 
@@ -51,6 +55,9 @@
         <li class="nav-item">
           <a class="nav-link" href="NASA.html">Space</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="vacationMap.html">Vacation Map</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -61,12 +68,7 @@
       <div class="card">
         <h2>NASA's Picture of the Day</h2>
         <h5>Click to look at it.</h5>
-        <form>
-          <input id="starsPicSubmit" type="submit" value="View"></input>
-        </form>
-        <hr>
-        <div id="starsPic">
-        </div>
+        <div id="map"></div>
       </div>
     </div>
     <div class="rightcolumn">
@@ -92,6 +94,13 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
   <script text="type/javascript" src="NASAscript.js">
+  </script>
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script text="type/javascript" src="vacation_script.js">
   </script>
 
 </body>

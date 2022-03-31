@@ -60,3 +60,5 @@ body {
     width: 100%;
   }
 }
+
+#map { height: 180px; }
