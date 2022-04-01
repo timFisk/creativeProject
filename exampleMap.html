@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
   <!-- Required meta tags -->
@@ -11,9 +11,9 @@
 
   <<link rel="stylesheet" href="master.css">
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
 
     <title>Ultimate How To</title>
 </head>
@@ -58,17 +58,28 @@
         <li class="nav-item">
           <a class="nav-link" href="vacationMap.html">Vacation Map</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="exampleMap.html">Example Map</a>
+        </li>
       </ul>
     </div>
   </nav>
 
-
   <div class="row">
     <div class="leftcolumn">
       <div class="card">
-        <h2>NASA's Picture of the Day</h2>
-        <h5>Click to look at it.</h5>
-        <div id="map"></div>
+        <div id="map">
+        </div>
+        <script>
+          var map = L.map('map').setView([0, 0], 1);
+          L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=HyW3eGxRB57DKycyI0my', {
+            tileSize: 512,
+            zoomOffset: -1,
+            minZoom: 1,
+            attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+            crossOrigin: true
+          }).addTo(map);
+        </script>
       </div>
     </div>
     <div class="rightcolumn">
@@ -85,7 +96,6 @@
     <a href="https://github.com/timFisk/creativeProject">Click on me.</a>
   </div>
 
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -94,13 +104,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
   <script text="type/javascript" src="NASAscript.js">
-  </script>
-
-  <!-- Make sure you put this AFTER Leaflet's CSS -->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
-  <script text="type/javascript" src="vacation_script.js">
   </script>
 
 </body>

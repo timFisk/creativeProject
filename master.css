@@ -61,4 +61,7 @@ body {
   }
 }
 
-#map { height: 180px; }
+#map {
+  height: 600px;
+  width: 1075px;
+}
